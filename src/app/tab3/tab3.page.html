@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+     Weather In Ireland(Dublin)
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,16 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Weather In Ireland</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ul>
+    <li *ngFor="let weather of IrishWeather"><!--makes a single instance of array IrishWeather-->
+    
+      <h3>Weather Type = {{weather.main}}</h3> <!--reads in variables from irishWeather and displays-->
+    <p>Weather Type(Extra) = {{weather.description}}</p>
+     </ul>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+
+  <app-explore-container name="Irish Weather"></app-explore-container>
 </ion-content>

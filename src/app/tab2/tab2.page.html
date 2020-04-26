@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+     News In Ireland
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,18 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">News In Ireland</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ul>
+    <li *ngFor="let story of NewsStories"><!--makes a single instance of array newsStories-->
+    
+      <h3>{{story.title}}</h3> <!--reads in variables from newStories and displays-->
+    <p>{{story.content}}</p>
+    <img height=300 width=500 src = "{{story.urlToImage}}"><!--image not displaying over downtime on source, please check-just displays null in Json formatter-->
+  
+     </ul>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+
+  <app-explore-container name="Irish News"></app-explore-container>
 </ion-content>
